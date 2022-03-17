@@ -1,0 +1,79 @@
+@import '../../../styles/colors';
+
+.dropdown_select {
+	position: relative;
+	z-index: 2 !important;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 24px;
+	padding: 16px;
+
+	user-select: none !important;
+
+	border-radius: 8px;
+	background: #e4e4e4;
+
+	&_wrapper {
+		position: relative;
+	}
+
+	&_container {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+
+		display: flex;
+		overflow: hidden;
+		flex-direction: column;
+
+		width: 100%;
+
+		border-radius: 8px;
+		background: #f1f1f1;
+		box-shadow: 0 6px 11px rgba(0, 0, 0, 0.08);
+		gap: 1px;
+	}
+
+	&_item {
+		padding: 16px;
+
+		cursor: pointer;
+
+		color: $gray;
+		background: #fff;
+	}
+}
+
+.active {
+	color: $black;
+
+	font-weight: 600;
+}
+
+.dropdown {
+	display: flex;
+	justify-content: space-between;
+
+	margin: 16px 0;
+	padding: 16px 20px 16px 24px;
+
+	cursor: pointer;
+
+	color: $gray;
+	border-radius: 8px;
+	background: #e4e4e4;
+
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22px;
+
+	img {
+		filter:
+			invert(57%) sepia(3%) saturate(98%) hue-rotate(202deg)
+			brightness(87%) contrast(83%);
+	}
+}

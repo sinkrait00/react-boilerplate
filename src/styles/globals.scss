@@ -1,0 +1,138 @@
+//@import '~bootstrap/scss/bootstrap-grid';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './colors';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	font-family: Roboto, sans-serif;
+}
+
+html,
+body {
+	overflow-x: hidden;
+
+	background: #f7f7f7;
+}
+
+body {
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+
+	color: inherit;
+}
+
+main {
+	display: flex;
+
+	.page_title {
+		margin-bottom: 32px;
+
+		color: $black;
+
+		font-size: 22px;
+		font-weight: 600;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+
+		width: 100%;
+		max-width: calc(100% - 244px);
+		margin-top: 32px;
+		padding: 0 50px 86px 58px;
+	}
+
+	@media screen and (max-width: 992px) {
+		.page_title {
+			margin-bottom: 0;
+
+			font-size: 24px;
+		}
+
+		.content {
+			display: block;
+
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+}
+
+.swiper {
+	position: static !important;
+
+	display: flex;
+	overflow: hidden;
+
+	background: transparent !important;
+
+	&-button {
+		&-next {
+			right: -8px !important;
+		}
+
+		&-prev {
+			right: 20px !important;
+			left: auto !important;
+		}
+
+		&-prev,
+		&-next {
+			top: auto !important;
+			bottom: -50px !important;
+
+			color: $black !important;
+		}
+
+		&-prev::after,
+		&-next::after {
+			font-size: 16px !important;
+		}
+	}
+
+	&-pagination {
+		bottom: -20px !important;
+
+		&-bullet {
+			opacity: 0.35 !important;
+			background: #7f7f80 !important;
+
+			&-active {
+				opacity: 1 !important;
+				background: #472f91 !important;
+			}
+		}
+	}
+
+	&-slide {
+		position: relative !important;
+
+		display: box;
+		display: flexbox;
+		display: flex;
+		display: inline !important;
+		align-items: center;
+		justify-content: center;
+
+		width: auto !important;
+		max-width: 100%;
+		height: auto !important;
+		min-height: 130px !important;
+
+		text-align: center;
+
+		font-size: 18px;
+		object-fit: fill;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		-ms-flex-align: center;
+		-ms-flex-pack: center;
+	}
+}
